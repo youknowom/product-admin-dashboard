@@ -6,7 +6,7 @@ A simple and clean admin dashboard to manage products using the DummyJSON API.
 
 ## 🚀 Demo & Test Credentials
 
-- **Live URL**: [Add your deployed link here]
+- **Live URL**: [https://product-admin-dashboard-omkar.vercel.app](https://product-admin-dashboard-omkar.vercel.app)
 - **Username**: `emilys`
 - **Password**: `emilyspass`
 *(You can also click the **Auto-fill** button on the login screen)*
