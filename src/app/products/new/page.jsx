@@ -48,9 +48,12 @@ export default function NewProductPage() {
       <div className="mb-6">
         <Link
           href="/products"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors mb-2"
+          className="btn-glass-pill inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-zinc-600 dark:text-zinc-300 bg-zinc-100/70 dark:bg-zinc-800/60 hover:bg-zinc-200/80 dark:hover:bg-zinc-700/70 border border-zinc-200/80 dark:border-zinc-700/60 shadow-xs mb-3"
         >
-          ← Back to Products
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Products
         </Link>
         <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
           Add New Product
