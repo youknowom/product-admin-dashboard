@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { authService } from "@/services/auth.service";
 import { setStoredAuth } from "@/lib/auth";
+import Logo from "@/components/ui/Logo";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -72,25 +73,25 @@ export default function LoginForm() {
   return (
     <div className="w-full max-w-md p-8 bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-zinc-200 dark:border-zinc-800">
       <div className="text-center mb-6">
-        <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
-          Admin Portal
-        </h1>
+        <div className="flex justify-center mb-3">
+          <Logo size="lg" />
+        </div>
         <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-          Sign in to manage your inventory and products
+          Sign in to manage your inventory and stock
         </p>
       </div>
 
       {/* Demo Credentials Helper Pill */}
-      <div className="mb-6 p-3 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/50 rounded-lg flex items-center justify-between text-xs">
+      <div className="mb-6 p-3 bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-900/50 rounded-lg flex items-center justify-between text-xs">
         <div>
-          <span className="font-semibold text-blue-900 dark:text-blue-300">Demo User:</span>{" "}
-          <code className="text-blue-700 dark:text-blue-400">emilys</code> /{" "}
-          <code className="text-blue-700 dark:text-blue-400">emilyspass</code>
+          <span className="font-semibold text-orange-900 dark:text-orange-300">Demo User:</span>{" "}
+          <code className="text-orange-700 dark:text-orange-400">emilys</code> /{" "}
+          <code className="text-orange-700 dark:text-orange-400">emilyspass</code>
         </div>
         <button
           type="button"
           onClick={fillDemoCredentials}
-          className="text-blue-600 dark:text-blue-400 font-medium hover:underline cursor-pointer"
+          className="btn-glass-pill px-2.5 py-1 text-xs font-semibold text-orange-600 dark:text-orange-400 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/25 dark:border-orange-500/35 cursor-pointer"
         >
           Auto-fill
         </button>
@@ -124,7 +125,7 @@ export default function LoginForm() {
             className={`w-full px-3.5 py-2.5 rounded-lg border bg-zinc-50 dark:bg-zinc-800/60 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 transition-all ${
               errors.username
                 ? "border-red-500 focus:ring-red-200"
-                : "border-zinc-300 dark:border-zinc-700 focus:ring-blue-500/20 focus:border-blue-500"
+                : "border-zinc-300 dark:border-zinc-700 focus:ring-orange-500/20 focus:border-orange-500"
             }`}
           />
           {errors.username && (
@@ -152,7 +153,7 @@ export default function LoginForm() {
             className={`w-full px-3.5 py-2.5 rounded-lg border bg-zinc-50 dark:bg-zinc-800/60 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 transition-all ${
               errors.password
                 ? "border-red-500 focus:ring-red-200"
-                : "border-zinc-300 dark:border-zinc-700 focus:ring-blue-500/20 focus:border-blue-500"
+                : "border-zinc-300 dark:border-zinc-700 focus:ring-orange-500/20 focus:border-orange-500"
             }`}
           />
           {errors.password && (
@@ -165,7 +166,7 @@ export default function LoginForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full py-2.5 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/40 flex items-center justify-center cursor-pointer disabled:cursor-not-allowed"
+          className="btn-glass-primary w-full py-2.5 px-4 rounded-full text-white font-semibold text-sm flex items-center justify-center cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isLoading ? (
             <>

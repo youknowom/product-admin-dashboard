@@ -12,8 +12,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Product Admin Dashboard",
-  description: "Product administration and management dashboard",
+  title: "Product Stock - Admin Dashboard",
+  description: "Product Stock inventory and administration management dashboard",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

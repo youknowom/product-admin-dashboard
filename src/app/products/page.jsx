@@ -153,10 +153,10 @@ function ProductsContent() {
 
         <Link
           href="/products/new"
-          className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors shadow-sm gap-2 shrink-0 cursor-pointer"
+          className="btn-glass-primary inline-flex items-center justify-center px-5 py-2.5 rounded-full text-white text-sm font-semibold gap-2 shrink-0 cursor-pointer"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M12 4v16m8-8H4" />
           </svg>
           Add Product
         </Link>
@@ -197,7 +197,7 @@ function ProductsContent() {
             onClick={() =>
               updateUrlParams({ search: "", category: "", sortBy: "", order: "asc", page: 1 })
             }
-            className="px-4 py-2 text-xs font-semibold text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900/60 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/40 transition-colors cursor-pointer"
+            className="btn-glass-pill px-4 py-2 text-xs font-semibold text-orange-600 dark:text-orange-400 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/25 dark:border-orange-500/35 shadow-xs cursor-pointer"
           >
             Clear all filters
           </button>

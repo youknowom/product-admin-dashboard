@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { isAuthenticated, getStoredUser, removeStoredToken } from "@/lib/auth";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import Logo from "@/components/ui/Logo";
 
 export default function ProductsLayout({ children }) {
   const router = useRouter();
@@ -36,7 +37,7 @@ export default function ProductsLayout({ children }) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-950">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-8 h-8 border-4 border-orange-600 border-t-transparent rounded-full animate-spin"></div>
           <p className="text-sm text-zinc-500">Checking authorization...</p>
         </div>
       </div>
@@ -51,18 +52,16 @@ export default function ProductsLayout({ children }) {
           <div className="flex items-center gap-6">
             <Link
               href="/products"
-              className="text-lg font-bold tracking-tight text-zinc-900 dark:text-white flex items-center gap-2"
+              className="flex items-center group transition-opacity hover:opacity-95"
+              aria-label="Product Stock Home"
             >
-              <span className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black text-sm shadow-sm">
-                PA
-              </span>
-              ProductAdmin
+              <Logo size="md" />
             </Link>
 
             <nav className="hidden sm:flex items-center gap-4 text-sm font-medium">
               <Link
                 href="/products"
-                className="text-zinc-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-zinc-600 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
               >
                 Products
               </Link>
@@ -79,7 +78,7 @@ export default function ProductsLayout({ children }) {
             )}
             <button
               onClick={handleLogout}
-              className="px-3.5 py-1.5 text-xs sm:text-sm font-medium text-red-600 hover:text-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 rounded-lg transition-colors border border-red-200 dark:border-red-900/50 cursor-pointer"
+              className="btn-glass-pill px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-rose-600 dark:text-rose-400 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/25 dark:border-rose-500/35 shadow-xs cursor-pointer"
             >
               Logout
             </button>

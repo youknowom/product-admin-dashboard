@@ -126,24 +126,33 @@ export default function ProductDetailPage({ params }) {
       <div className="flex items-center justify-between flex-wrap gap-4">
         <Link
           href="/products"
-          className="inline-flex items-center gap-1 text-sm font-medium text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
+          className="btn-glass-pill inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-zinc-600 dark:text-zinc-300 bg-zinc-100/70 dark:bg-zinc-800/60 hover:bg-zinc-200/80 dark:hover:bg-zinc-700/70 border border-zinc-200/80 dark:border-zinc-700/60 shadow-xs"
         >
-          ← Back to Catalog
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Catalog
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <button
             type="button"
             onClick={() => setShowEditModal(true)}
-            className="px-4 py-2 text-sm font-medium border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-700 rounded-lg transition-colors cursor-pointer"
+            className="btn-glass-pill inline-flex items-center gap-1.5 px-4 py-2 text-xs sm:text-sm font-semibold text-zinc-800 dark:text-zinc-100 bg-white/70 dark:bg-zinc-800/70 hover:bg-white/90 dark:hover:bg-zinc-700/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-xs cursor-pointer"
           >
+            <svg className="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            </svg>
             Edit Product
           </button>
           <button
             type="button"
             onClick={() => setShowDeleteModal(true)}
-            className="px-4 py-2 text-sm font-medium text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900/50 hover:bg-rose-50 dark:hover:bg-rose-950/40 rounded-lg transition-colors cursor-pointer"
+            className="btn-glass-pill inline-flex items-center gap-1.5 px-4 py-2 text-xs sm:text-sm font-semibold text-rose-600 dark:text-rose-400 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/25 dark:border-rose-500/35 shadow-xs cursor-pointer"
           >
+            <svg className="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
             Delete
           </button>
         </div>
@@ -175,7 +184,7 @@ export default function ProductDetailPage({ params }) {
                   onClick={() => setSelectedImage(img)}
                   className={`w-16 h-16 rounded-lg bg-zinc-50 dark:bg-zinc-800 shrink-0 border-2 overflow-hidden transition-all cursor-pointer ${
                     selectedImage === img
-                      ? "border-blue-600 shadow-sm"
+                      ? "border-orange-600 shadow-sm shadow-orange-500/20"
                       : "border-transparent opacity-70 hover:opacity-100"
                   }`}
                 >
@@ -191,7 +200,7 @@ export default function ProductDetailPage({ params }) {
         <div className="flex flex-col justify-between space-y-6">
           <div className="space-y-4">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 uppercase tracking-wide">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-orange-50 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 uppercase tracking-wide">
                 {product.category}
               </span>
               {product.brand && (

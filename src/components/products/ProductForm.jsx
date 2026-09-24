@@ -106,7 +106,7 @@ export default function ProductForm({
           className={`w-full px-3.5 py-2 rounded-lg border bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 transition-all ${
             errors.title
               ? "border-red-500 focus:ring-red-200"
-              : "border-zinc-300 dark:border-zinc-700 focus:ring-blue-500/20 focus:border-blue-500"
+              : "border-zinc-300 dark:border-zinc-700 focus:ring-orange-500/20 focus:border-orange-500"
           }`}
         />
         {errors.title && (
@@ -133,7 +133,7 @@ export default function ProductForm({
             className={`w-full px-3.5 py-2 rounded-lg border bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 transition-all cursor-pointer ${
               errors.category
                 ? "border-red-500 focus:ring-red-200"
-                : "border-zinc-300 dark:border-zinc-700 focus:ring-blue-500/20 focus:border-blue-500"
+                : "border-zinc-300 dark:border-zinc-700 focus:ring-orange-500/20 focus:border-orange-500"
             }`}
           >
             <option value="">Select a category</option>
@@ -164,7 +164,7 @@ export default function ProductForm({
             value={formData.brand}
             onChange={handleChange}
             placeholder="e.g. Sony, Apple, Samsung"
-            className="w-full px-3.5 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+            className="w-full px-3.5 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
           />
         </div>
       </div>
@@ -190,7 +190,7 @@ export default function ProductForm({
             className={`w-full px-3.5 py-2 rounded-lg border bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 transition-all ${
               errors.price
                 ? "border-red-500 focus:ring-red-200"
-                : "border-zinc-300 dark:border-zinc-700 focus:ring-blue-500/20 focus:border-blue-500"
+                : "border-zinc-300 dark:border-zinc-700 focus:ring-orange-500/20 focus:border-orange-500"
             }`}
           />
           {errors.price && (
@@ -219,7 +219,7 @@ export default function ProductForm({
             className={`w-full px-3.5 py-2 rounded-lg border bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 transition-all ${
               errors.stock
                 ? "border-red-500 focus:ring-red-200"
-                : "border-zinc-300 dark:border-zinc-700 focus:ring-blue-500/20 focus:border-blue-500"
+                : "border-zinc-300 dark:border-zinc-700 focus:ring-orange-500/20 focus:border-orange-500"
             }`}
           />
           {errors.stock && (
@@ -245,7 +245,7 @@ export default function ProductForm({
           value={formData.thumbnail}
           onChange={handleChange}
           placeholder="https://example.com/image.jpg"
-          className="w-full px-3.5 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+          className="w-full px-3.5 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
         />
       </div>
 
@@ -267,7 +267,7 @@ export default function ProductForm({
           className={`w-full px-3.5 py-2 rounded-lg border bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 transition-all ${
             errors.description
               ? "border-red-500 focus:ring-red-200"
-              : "border-zinc-300 dark:border-zinc-700 focus:ring-blue-500/20 focus:border-blue-500"
+              : "border-zinc-300 dark:border-zinc-700 focus:ring-orange-500/20 focus:border-orange-500"
           }`}
         />
         {errors.description && (
@@ -278,13 +278,13 @@ export default function ProductForm({
       </div>
 
       {/* Buttons */}
-      <div className="flex items-center justify-end gap-3 pt-3 border-t border-zinc-200 dark:border-zinc-800">
+      <div className="flex items-center justify-end gap-2.5 pt-4 border-t border-zinc-200 dark:border-zinc-800">
         {onCancel && (
           <button
             type="button"
             onClick={onCancel}
             disabled={isSubmitting}
-            className="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors cursor-pointer disabled:opacity-50"
+            className="btn-glass-pill px-4 py-2 text-xs sm:text-sm font-semibold text-zinc-700 dark:text-zinc-200 bg-zinc-100/70 dark:bg-zinc-800/60 hover:bg-zinc-200/80 dark:hover:bg-zinc-700/70 border border-zinc-200/80 dark:border-zinc-700/60 cursor-pointer disabled:opacity-50"
           >
             Cancel
           </button>
@@ -292,7 +292,7 @@ export default function ProductForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-5 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors shadow-sm flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-glass-primary px-6 py-2.5 text-xs sm:text-sm font-semibold text-white rounded-full flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

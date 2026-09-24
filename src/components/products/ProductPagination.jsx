@@ -47,7 +47,7 @@ export default function ProductPagination({
             id="pageSizeSelect"
             value={pageSize}
             onChange={(e) => onPageSizeChange(Number(e.target.value))}
-            className="px-2 py-1 rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-xs text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer"
+            className="px-2 py-1 rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-xs text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 cursor-pointer"
           >
             <option value={10}>10</option>
             <option value={20}>20</option>
@@ -80,7 +80,7 @@ export default function ProductPagination({
                 onClick={() => onPageChange(p)}
                 className={`w-8 h-8 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                   p === safePage
-                    ? "bg-blue-600 text-white font-bold"
+                    ? "bg-orange-600 text-white font-bold shadow-sm shadow-orange-500/20"
                     : "hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
                 }`}
               >
